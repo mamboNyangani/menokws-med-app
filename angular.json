@@ -8,6 +8,8 @@
     "overlay-emed-layout": "libs/overlay/emed-layout",
     "patient-management-data": "libs/patient-management/data",
     "patient-management-ui": "libs/patient-management/ui",
+    "settings-data": "libs/settings/data",
+    "settings-ui": "libs/settings/ui",
     "utils-core": "libs/utils/core"
   }
 }
