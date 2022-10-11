@@ -25,6 +25,8 @@ import {FileUploadModule} from 'primeng/fileupload';
 import {ToolbarModule} from 'primeng/toolbar';
 import {StepsModule} from 'primeng/steps';
 import {CalendarModule} from 'primeng/calendar';
+import {TabMenuModule} from 'primeng/tabmenu';
+import {TabViewModule} from 'primeng/tabview';
 
 const MODULES: any[] = [
     ButtonModule,
@@ -40,6 +42,7 @@ const MODULES: any[] = [
     DialogModule,
     DataViewModule,
     TableModule,
+    TabMenuModule,
     RatingModule,
     BlockUIModule,
     DropdownModule,
@@ -51,7 +54,8 @@ const MODULES: any[] = [
     SlideMenuModule,
     ToolbarModule,
     FileUploadModule,
-    StepsModule
+    StepsModule,
+    TabViewModule
 ];
 
 @NgModule({

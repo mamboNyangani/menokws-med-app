@@ -1,0 +1,23 @@
+<div class="stepsdemo-content">
+    <p-card>
+        <form [formGroup]="form" (submit)="save()">
+
+                <div>
+                    <div class="p-inputgroup">
+                        <input type="text" placeholder="Name" pInputText formControlName="name">
+                    </div>
+                </div>
+                <div class="">
+                    <div class="p-inputgroup">
+                        <input type="text" pInputText placeholder="Description" formControlName="description">
+                    </div>
+                </div>
+
+            <div class="grid grid-nogutter justify-content-end">
+                <p-button label="Save" icon="pi pi-angle-right" [disabled]="false" iconPos="right" type="submit">
+                </p-button>
+            </div>
+
+        </form>
+    </p-card>
+</div>

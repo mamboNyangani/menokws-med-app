@@ -5,17 +5,19 @@ import { RolesComponent } from './roles/roles.component';
 import { AppointmentTypesComponent } from './appointment-types/appointment-types.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { SettingsRoutingModule } from './settings-routing.module';
+import { UtilsCoreModule } from '@menokws/core';
+import { SettingsUiComponent } from './settings-ui.component';
+import { AddRolesComponent } from './roles/add-roles/add-roles.component';
 
 @NgModule({
-  imports: [
-    CommonModule, 
-    SettingsRoutingModule
-  ],
-  
+  imports: [CommonModule, SettingsRoutingModule, UtilsCoreModule],
+
   declarations: [
-    RolesComponent, 
-    AppointmentTypesComponent, 
-    MyAccountComponent
+    RolesComponent,
+    AppointmentTypesComponent,
+    MyAccountComponent,
+    SettingsUiComponent,
+    AddRolesComponent,
   ],
 })
-export class SettingsUiModule { }
+export class SettingsUiModule {}
