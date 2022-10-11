@@ -1,0 +1,92 @@
+<p-toast></p-toast>
+<div class="card">
+    <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+            <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="addPatient()"></button>
+            <button pButton pRipple [label]="'Delete'" icon="pi pi-trash" class="p-button-danger" ></button>
+            <!-- <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button> -->
+            <!-- <button pButton pRipple [label]="Delete" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedProducts()" [disabled]="!selectedProducts || !selectedProducts.length"></button> -->
+        </ng-template>
+
+        <ng-template pTemplate="right">
+            <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="mr-2 inline-block"></p-fileUpload>
+            <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help"></button>
+        </ng-template>
+    </p-toolbar>
+    </div>
+
+<p-table #dt [value]="patients" [(selection)]="selectedPatients" dataKey="id" styleClass="p-datatable-customers" [rowHover]="true"
+    [rows]="patients.length" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [loading]="loading" responsiveLayout="scroll"
+    [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [filterDelay]="0" [globalFilterFields]="['name','country.name','representative.name','status']">
+    <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+            Patients
+            <span class="p-input-icon-left ">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" (input)="dt.filterGlobal($event.target, 'contains')" placeholder="Global Search" />
+            </span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 3rem">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th>Full Name</th>
+            <th>ID No</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Marital Status</th>
+            <th>Added by</th>
+            <!-- <th pSortableColumn="country.name">
+                <div class="flex justify-content-between align-items-center">
+                    Country
+                    <p-sortIcon field="country.name"></p-sortIcon>
+                    <p-columnFilter type="text" field="country.name" display="menu" class="ml-auto"></p-columnFilter>
+                </div>
+            </th> -->
+            <th style="width: 8rem"></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-patient>
+        <tr class="p-selectable-row">
+            <td>
+                <p-tableCheckbox [value]="patient"></p-tableCheckbox>
+            </td>
+            <td>
+                <span class="p-column-title">Name</span>
+                {{patient.name}} {{patient.middle_name}} {{patient.surname}}
+            </td>
+            <td>
+                <span class="p-column-title">ID No</span>
+                <span class="image-text">{{patient.id_number}}</span>
+            </td>
+            <td>
+                <span class="p-column-title">Date of Birth</span>
+                <span class="image-text">{{patient.date_of_birth | date}}</span>
+            </td>
+            <td>
+                <span class="p-column-title">Gender</span>
+                <span class="image-text">{{patient.gender}}</span>
+            </td>
+            <td>
+                <span class="p-column-title">Marital Status</span>
+                <span class="image-text">{{patient.marital_status}}</span>
+            </td>
+            <td>
+                <span class="p-column-title">Added by</span>
+                <span class="image-text">{{patient.created_by}}</span>
+            </td>
+            <td>
+                <!-- <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editPatient(patient)"></button> -->
+                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deletePatient(patient)"></button>
+            </td>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="8">No patients found.</td>
+        </tr>
+    </ng-template>

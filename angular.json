@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "auth-ui": "libs/auth/ui",
+    "med-records": "apps/med-records",
+    "med-records-e2e": "apps/med-records-e2e",
+    "overlay-emed-layout": "libs/overlay/emed-layout",
+    "patient-management-data": "libs/patient-management/data",
+    "patient-management-ui": "libs/patient-management/ui",
+    "utils-core": "libs/utils/core"
+  }
+}

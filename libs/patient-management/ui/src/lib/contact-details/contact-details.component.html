@@ -1,0 +1,62 @@
+<div class="stepsdemo-content">
+    <p-card>
+        <form [formGroup]="form" (submit)="nextPage()">
+            <div class="grid p-fluid p-3">
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" placeholder="Address" pInputText formControlName="address">
+                    </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" pInputText placeholder="Address 2" formControlName="address_2">
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid p-3">
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" placeholder="Mother Name" pInputText formControlName="mother_name">
+                    </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" pInputText placeholder="Father Name" formControlName="father_name">
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid p-3">
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" placeholder="Emergency Contact" pInputText
+                            formControlName="emergency_contact">
+                    </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" placeholder="Emergency Phone" pInputText formControlName="emergency_phone">
+                    </div>
+                </div>
+            </div>
+            <div class="grid p-fluid p-3">
+
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" pInputText placeholder="Email" formControlName="email">
+                    </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" pInputText placeholder="Code Id" formControlName="code_id">
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-nogutter justify-content-end">
+                <button pButton type="button" label="Skip" class="p-button-outlined mr-2" icon="pi pi-angle-left"
+                    (click)="skip()"></button>
+                <p-button label="Next" icon="pi pi-angle-right" [disabled]="false" iconPos="right" type="submit">
+                </p-button>
+            </div>
+        </form>
+    </p-card>
+</div>

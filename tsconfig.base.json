@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@menokws/auth-ui": ["libs/auth/ui/src/index.ts"],
+      "@menokws/core": ["libs/utils/core/src/index.ts"],
+      "@menokws/emed-layout": ["libs/overlay/emed-layout/src/index.ts"],
+      "@menokws/patient-management": [
+        "libs/patient-management/ui/src/index.ts"
+      ],
+      "@menokws/patient-management-data": [
+        "libs/patient-management/data/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

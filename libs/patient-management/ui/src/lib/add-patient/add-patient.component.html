@@ -1,0 +1,6 @@
+<div class="card">
+    <p-steps [model]="items" [readonly]="true" [(activeIndex)]="index"></p-steps>
+    <menokws-personal-details *ngIf="index == 0" (next)="next($event)"></menokws-personal-details>
+    <menokws-contact-details *ngIf="index == 1" (next)="next()" [patient]="patient"></menokws-contact-details>
+    <menokws-employment-details *ngIf="index == 2" (save)="save($event)" [patient]="patient"></menokws-employment-details>
+</div>

@@ -1,0 +1,23 @@
+
+<p-menubar [model]="[]">
+    <ng-template pTemplate="start">
+        <img src="assets/icon.jpeg" height="40" class="mr-2">
+    </ng-template>
+    <ng-template pTemplate="end">
+        <!-- <input class="mr-6 py-3 formControl " type="text" pInputText placeholder="Search"> -->
+        <button (click)="account()" pButton type="button" label="Account" icon="pi pi-user" iconPos="left" class="p-button-text p-button-text"></button>
+        <button (click)="settings()" pButton type="button" label="Settings" icon="pi pi-cog" iconPos="left" class="p-button-text p-button-text"></button>
+    </ng-template>
+</p-menubar>
+
+
+<div class="grid">
+    <div class="col-2">
+        <mambos-side-nav></mambos-side-nav>
+    </div>
+    <div class="col-10">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+

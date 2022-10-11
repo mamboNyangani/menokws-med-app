@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/patient-management/ui/src",
+  "prefix": "menokws",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/patient-management/ui"],
+      "options": {
+        "jestConfig": "libs/patient-management/ui/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/patient-management/ui/**/*.ts",
+          "libs/patient-management/ui/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
