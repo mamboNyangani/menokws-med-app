@@ -27,12 +27,15 @@ import {StepsModule} from 'primeng/steps';
 import {CalendarModule} from 'primeng/calendar';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {TabViewModule} from 'primeng/tabview';
+import {EditorModule} from 'primeng/editor';
+
 
 const MODULES: any[] = [
     ButtonModule,
     PanelMenuModule,
     AccordionModule,
     MenubarModule,
+    EditorModule,
     InputTextModule,
     CalendarModule,
     CarouselModule,

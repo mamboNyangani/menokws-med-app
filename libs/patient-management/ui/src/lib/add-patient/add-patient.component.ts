@@ -13,7 +13,7 @@ export class AddPatientComponent implements OnInit {
   index: number = 0
   patient!: Patient  ;
 
-  constructor(public messageService: MessageService, private ref : DynamicDialogRef,) { }
+  constructor(public messageService: MessageService, private ref : DynamicDialogRef) { }
 
   ngOnInit(): void {
     this.items = [{
@@ -37,7 +37,6 @@ export class AddPatientComponent implements OnInit {
   }
 
   save(event : any){
-    console.log(event)
     this.messageService.add({severity:'success', summary:`${event.message}`, detail:'Patient has been added successfully!'});
     this.ref.close()
   }
