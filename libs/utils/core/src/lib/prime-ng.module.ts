@@ -28,6 +28,8 @@ import {CalendarModule} from 'primeng/calendar';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {TabViewModule} from 'primeng/tabview';
 import {EditorModule} from 'primeng/editor';
+import {AvatarModule} from 'primeng/avatar';
+import {AvatarGroupModule} from 'primeng/avatargroup';
 
 
 const MODULES: any[] = [
@@ -40,6 +42,8 @@ const MODULES: any[] = [
     CalendarModule,
     CarouselModule,
     CheckboxModule,
+    AvatarGroupModule,
+    AvatarModule,
     ToastModule,
     CardModule,
     DialogModule,

@@ -12,6 +12,7 @@ import { PatientChoicesComponent } from './patient-choices/patient-choices.compo
 import { PatientStastiticsComponent } from './patient-stastitics/patient-stastitics.component';
 import { NextOfKinComponent } from './next-of-kin/next-of-kin.component';
 import { MiscComponent } from './misc/misc.component';
+import { ViewPatientDetailsComponent } from './view-patient-details/view-patient-details.component';
 
 export const patientManagementUiRoutes: Route[] = [];
 
@@ -32,9 +33,8 @@ export const patientManagementUiRoutes: Route[] = [];
     PatientStastiticsComponent,
     NextOfKinComponent,
     MiscComponent,
+    ViewPatientDetailsComponent,
   ],
-  providers:[
-    DatePipe
-  ]
+  providers: [DatePipe],
 })
 export class PatientManagementUiModule {}
