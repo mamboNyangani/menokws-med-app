@@ -9,4 +9,5 @@ export class Patient {
     updated_at!: Date;
     created_at!: Date;
     created_by!: Date;
+    marital_status !: string
 }

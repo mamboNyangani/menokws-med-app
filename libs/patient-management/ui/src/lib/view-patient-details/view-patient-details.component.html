@@ -2,4 +2,21 @@
     <!-- <p-avatar  class="" image="user.png" size="large"></p-avatar> -->
     <p-avatar icon="pi pi-user" size="large" shape="circle"></p-avatar>
     </div>
-    <p-tabMenu [model]="items"></p-tabMenu>
+    
+    
+    <div class="p-2 m-2">
+        <p-tabView>
+            <p-tabPanel header="Personal">
+                <ng-template pTemplate="content">
+                    <menokws-personal-details-page [id]="id"></menokws-personal-details-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Employment">
+                <ng-template pTemplate="content">
+                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                </ng-template>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+
+

@@ -13,6 +13,8 @@ import { PatientStastiticsComponent } from './patient-stastitics/patient-stastit
 import { NextOfKinComponent } from './next-of-kin/next-of-kin.component';
 import { MiscComponent } from './misc/misc.component';
 import { ViewPatientDetailsComponent } from './view-patient-details/view-patient-details.component';
+import { PersonalDetailsPageComponent } from './pages/personal-details-page/personal-details-page.component';
+import { EmploymentDetailsPageComponent } from './pages/employment-details-page/employment-details-page.component';
 
 export const patientManagementUiRoutes: Route[] = [];
 
@@ -34,6 +36,8 @@ export const patientManagementUiRoutes: Route[] = [];
     NextOfKinComponent,
     MiscComponent,
     ViewPatientDetailsComponent,
+    PersonalDetailsPageComponent,
+    EmploymentDetailsPageComponent,
   ],
   providers: [DatePipe],
 })

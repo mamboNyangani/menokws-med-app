@@ -30,7 +30,7 @@ export class RequestService<T> {
 
   getById(url : string, id: any): Observable<T> {
     return this.http
-      .get<T>(this.appConfig.baseUrl + url + id)
+      .get<T>(this.appConfig.baseUrl + url + '/'+id)
       .pipe(retry(1), catchError(this.handleError));
   }
 
