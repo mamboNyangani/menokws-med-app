@@ -1,17 +1,52 @@
+<button pButton type="button"  icon="pi pi-times" class=" m-2 p-button-outlined" [routerLink]="'/patient'"></button>
 <div class="flex align-items-center justify-content-center">
     <!-- <p-avatar  class="" image="user.png" size="large"></p-avatar> -->
     <p-avatar icon="pi pi-user" size="large" shape="circle"></p-avatar>
     </div>
     
-    
     <div class="p-2 m-2">
-        <p-tabView>
+        <p-tabView [scrollable]="true">
             <p-tabPanel header="Personal">
                 <ng-template pTemplate="content">
                     <menokws-personal-details-page [id]="id"></menokws-personal-details-page>
                 </ng-template>
             </p-tabPanel>
             <p-tabPanel header="Employment">
+                <ng-template pTemplate="content">
+                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Contact Details">
+                <ng-template pTemplate="content">
+                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Guardian Details">
+                <ng-template pTemplate="content">
+                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Statitics">
+                <ng-template pTemplate="content">
+                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Choices">
+                <ng-template pTemplate="content">
+                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Episodes">
+                <ng-template pTemplate="content">
+                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Misc">
+                <ng-template pTemplate="content">
+                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Appointments">
                 <ng-template pTemplate="content">
                     <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
                 </ng-template>

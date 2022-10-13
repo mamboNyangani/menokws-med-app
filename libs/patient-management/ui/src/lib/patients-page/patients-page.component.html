@@ -79,7 +79,7 @@
                 <span class="image-text">{{patient.created_by}}</span>
             </td>
             <td>
-                <!-- <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editPatient(patient)"></button> -->
+                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" [routerLink]="patient.id"></button>
                 <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger" (click)="deletePatient(patient)"></button>
             </td>
 
