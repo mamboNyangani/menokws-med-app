@@ -6,6 +6,7 @@ import { SideNavComponent } from './layout/side-nav/side-nav.component';
 import { OverlayEmedRoutingModule } from './overlay-emed-routing.module';
 import { UtilsCoreModule } from '@menokws/core';
 import { AuthUiModule } from '@menokws/auth-ui';
+import { SakaiModule } from '@menokws/sakai';
 
 export const overlayEmedLayoutRoutes: Route[] = [];
 
@@ -15,7 +16,8 @@ export const overlayEmedLayoutRoutes: Route[] = [];
     RouterModule,
     UtilsCoreModule,
     AuthUiModule,
-    OverlayEmedRoutingModule
+    OverlayEmedRoutingModule,
+    SakaiModule
   ],
   declarations: [
     LayoutComponent,

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Route, RouterModule } from "@angular/router";
+import { AppLayoutComponent } from "@menokws/sakai";
 import { LayoutComponent } from "./layout/layout.component";
 
 
@@ -7,7 +8,7 @@ import { LayoutComponent } from "./layout/layout.component";
 const routes: Route[] = [
     { path: 'auth', loadChildren: () => import('@menokws/auth-ui').then(c => c.AuthUiModule) },
     {
-        path: '', component: LayoutComponent,
+        path: '', component: AppLayoutComponent,
        // canActivate: [AuthGuard],
         children:
             [

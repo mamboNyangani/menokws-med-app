@@ -24,6 +24,7 @@
       "@menokws/patient-management-data": [
         "libs/patient-management/data/src/index.ts"
       ],
+      "@menokws/sakai": ["libs/sakai/src/index.ts"],
       "@menokws/settings-data": ["libs/settings/data/src/index.ts"],
       "@menokws/settings-ui": ["libs/settings/ui/src/index.ts"]
     }
