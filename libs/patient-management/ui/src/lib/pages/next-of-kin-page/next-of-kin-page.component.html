@@ -1,0 +1,45 @@
+
+<div class="surface-section">
+    <div class="font-medium text-3xl text-900 mb-3">Guardian Details</div>
+    <ul class="list-none p-0 m-0">
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium"></div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1"></div>
+            <div class="w-6 md:w-2 flex justify-content-end">
+                <button pButton pRipple label="Edit" icon="pi pi-pencil" class="p-button-text" (click)="edit()"></button>
+            </div>
+        </li>
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium">Name</div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">{{guardian.name}}</div>
+        </li>
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium">Address</div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">{{guardian.address}}</div>
+        </li>
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium">City</div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">{{guardian.city}}</div>
+        </li>
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium">Postal Code</div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">{{ guardian.postal_code}}</div>
+        </li>
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium">Country</div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">{{guardian.country}}</div>
+        </li>
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium">Email</div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">{{guardian.email}}</div>
+        </li>
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium">Phone</div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">{{ guardian.phone}}</div>
+        </li>
+        <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+            <div class="text-500 w-6 md:w-2 font-medium">Mobile</div>
+            <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">{{ guardian.mobile}}</div>
+        </li>
+    </ul>
+</div>

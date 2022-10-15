@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { RequestService } from '@menokws/core';
 import { Patient } from '@menokws/patient-management-data';
 import { DialogService } from 'primeng/dynamicdialog';
-import { AddPatientComponent } from '../../add-patient/add-patient.component';
 import { PersonalDetailsComponent } from '../../create/personal-details/personal-details.component';
 
 @Component({

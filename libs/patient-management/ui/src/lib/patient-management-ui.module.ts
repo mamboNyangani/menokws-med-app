@@ -16,6 +16,7 @@ import { PersonalDetailsPageComponent } from './pages/personal-details-page/pers
 import { EmploymentDetailsPageComponent } from './pages/employment-details-page/employment-details-page.component';
 import { PatientsPageComponent } from './patients-page/patients-page.component';
 import { ContactDetailsPageComponent } from './pages/contact-details-page/contact-details-page.component';
+import { NextOfKinPageComponent } from './pages/next-of-kin-page/next-of-kin-page.component';
 
 export const patientManagementUiRoutes: Route[] = [];
 
@@ -40,6 +41,7 @@ export const patientManagementUiRoutes: Route[] = [];
     PersonalDetailsPageComponent,
     EmploymentDetailsPageComponent,
     ContactDetailsPageComponent,
+    NextOfKinPageComponent,
   ],
   providers: [DatePipe],
 })
