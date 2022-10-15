@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RequestService } from '@menokws/core';
-import { Patient } from '@menokws/patient-management-data';
+import { Employer, Patient } from '@menokws/patient-management-data';
+import { DynamicDialogConfig } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'menokws-employment-details',
@@ -9,23 +10,26 @@ import { Patient } from '@menokws/patient-management-data';
   styleUrls: ['./employment-details.component.scss'],
 })
 export class EmploymentDetailsComponent implements OnInit {
-  constructor(private fb: FormBuilder, private service : RequestService<any>) { }
+  constructor(private fb: FormBuilder, private service : RequestService<any>, private config : DynamicDialogConfig ) { }
   submitted: boolean = false
   personalInformation: any
   form! :  FormGroup
+  employer! : Employer
   @Output() save = new EventEmitter<any>();
-  @Input() patient! : Patient
+  @Input() isEdit : boolean = false
+  @Input() patient !: Patient
 
   ngOnInit(): void {
-    console.log("patient", this.patient)
+    this.employer =  this.config.data ? this.config.data.employer : new Employer()
+    this.isEdit = this.config.data ? this.config.data.isEdit : false
     this.form = this.fb.group({
-      occupation: [null, [Validators.required]],
-      employer: [null, [Validators.required]],
-      employer_address_1: [null, [Validators.required]],
-      employer_address_2: [null, [Validators.required]],
-      city: [null, [Validators.required]],
-      country: [null, [Validators.required]],
-      postal_code: [null, [Validators.required]],
+      occupation: [this.employer.occupation, [Validators.required]],
+      employer: [this.employer.employer, [Validators.required]],
+      employer_address_1: [this.employer.employer_address_1, [Validators.required]],
+      employer_address_2: [this.employer.employer_address_2, [Validators.required]],
+      city: [this.employer.city, [Validators.required]],
+      country: [this.employer.country, [Validators.required]],
+      postal_code: [this.employer.postal_code, [Validators.required]],
     })
   }
 

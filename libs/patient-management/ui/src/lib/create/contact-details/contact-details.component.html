@@ -52,9 +52,9 @@
                 </div>
             </div>
             <div class="grid grid-nogutter justify-content-end">
-                <button pButton type="button" label="Skip" class="p-button-outlined mr-2" icon="pi pi-angle-left"
+                <button  *ngIf="!isEdit" pButton type="button" label="Skip" class="p-button-outlined mr-2" icon="pi pi-angle-left"
                     (click)="skip()"></button>
-                <p-button label="Next" icon="pi pi-angle-right" [disabled]="false" iconPos="right" type="submit">
+                <p-button [label]="!isEdit ? 'Next' : 'Save'" icon="pi pi-angle-right" [disabled]="false" iconPos="right" type="submit">
                 </p-button>
             </div>
         </form>

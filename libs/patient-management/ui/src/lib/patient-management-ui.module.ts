@@ -15,6 +15,7 @@ import { ViewPatientDetailsComponent } from './view-patient-details/view-patient
 import { PersonalDetailsPageComponent } from './pages/personal-details-page/personal-details-page.component';
 import { EmploymentDetailsPageComponent } from './pages/employment-details-page/employment-details-page.component';
 import { PatientsPageComponent } from './patients-page/patients-page.component';
+import { ContactDetailsPageComponent } from './pages/contact-details-page/contact-details-page.component';
 
 export const patientManagementUiRoutes: Route[] = [];
 
@@ -38,6 +39,7 @@ export const patientManagementUiRoutes: Route[] = [];
     ViewPatientDetailsComponent,
     PersonalDetailsPageComponent,
     EmploymentDetailsPageComponent,
+    ContactDetailsPageComponent,
   ],
   providers: [DatePipe],
 })

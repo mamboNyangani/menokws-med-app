@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="grid grid-nogutter justify-content-end">
-                <p-button label="Next" icon="pi pi-angle-right" [disabled]="false" iconPos="right" type="submit">
+                <p-button [label]="!isEdit ? 'Next' : 'Save'" icon="pi pi-angle-right" [disabled]="false" iconPos="right" type="submit">
                 </p-button>
             </div>
         </form>

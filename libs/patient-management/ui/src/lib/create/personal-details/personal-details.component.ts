@@ -23,7 +23,6 @@ export class PersonalDetailsComponent implements OnInit {
   maritalStatus = ["Married" , "Single", "Divorced", "Widowed"]
 
   ngOnInit(): void {
-    this.patient
     this.patient =  this.config.data ? this.config.data.patient : new Patient()
     this.isEdit = this.config.data ? this.config.data.isEdit : false
     this.form = this.fb.group({
