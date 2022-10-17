@@ -19,6 +19,9 @@ import { ContactDetailsPageComponent } from './pages/contact-details-page/contac
 import { NextOfKinPageComponent } from './pages/next-of-kin-page/next-of-kin-page.component';
 import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
 import { PatientChoicesPageComponent } from './pages/patient-choices-page/patient-choices-page.component';
+import { MiscPageComponent } from './pages/misc-page/misc-page.component';
+import { EpisodesPageComponent } from './pages/episodes-page/episodes-page.component';
+import { AppointmentsPageComponent } from './pages/appointments-page/appointments-page.component';
 
 export const patientManagementUiRoutes: Route[] = [];
 
@@ -46,6 +49,9 @@ export const patientManagementUiRoutes: Route[] = [];
     NextOfKinPageComponent,
     StatisticsPageComponent,
     PatientChoicesPageComponent,
+    MiscPageComponent,
+    EpisodesPageComponent,
+    AppointmentsPageComponent,
   ],
   providers: [DatePipe],
 })

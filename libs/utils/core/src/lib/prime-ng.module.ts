@@ -30,6 +30,7 @@ import {TabViewModule} from 'primeng/tabview';
 import {EditorModule} from 'primeng/editor';
 import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
+import {TimelineModule} from 'primeng/timeline';
 
 
 const MODULES: any[] = [
@@ -62,7 +63,8 @@ const MODULES: any[] = [
     ToolbarModule,
     FileUploadModule,
     StepsModule,
-    TabViewModule
+    TabViewModule,
+    TimelineModule
 ];
 
 @NgModule({

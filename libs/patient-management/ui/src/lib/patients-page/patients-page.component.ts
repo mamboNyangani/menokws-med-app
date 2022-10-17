@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RequestService } from '@menokws/core';
 import { Patient } from '@menokws/patient-management-data';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
@@ -15,7 +16,7 @@ export class PatientsPageComponent implements OnInit {
   loading: boolean = true;
   activityValues: number[] = [0, 100];
 
-  constructor(private service: RequestService<any>, public dialogService: DialogService) { }
+  constructor(private service: RequestService<any>, public dialogService: DialogService, private router : Router) { }
 
   ngOnInit() {
     this.getPatients()
@@ -44,5 +45,13 @@ export class PatientsPageComponent implements OnInit {
       maximizable: true
     })
 
+  }
+
+  onConfirm(){
+    this.router.navigateByUrl(`/${1}`)
+  }
+
+  onReject(){
+    //close notification
   }
 }

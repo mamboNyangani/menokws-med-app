@@ -7,6 +7,7 @@ import { Injectable } from "@angular/core";
 export class AuthService {
     public checkToken(){
         var token = sessionStorage.getItem('token')
-        return token === undefined ? false : true
+        console.log(token)
+        return token === null ? false : true
     }
 }

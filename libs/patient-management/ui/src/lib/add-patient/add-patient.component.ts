@@ -33,7 +33,6 @@ export class AddPatientComponent implements OnInit {
     if(patient) this.patient = patient
     console.log(patient)
     this.index++
-    console.log(this.index)
   }
 
   save(event : any){

@@ -1,1 +1,22 @@
-<p>misc works!</p>
+<div class="stepsdemo-content">
+    <p-card>
+        <form [formGroup]="form" (submit)="nextPage()">
+            <div class="grid p-fluid p-3">
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" placeholder="Alive" pInputText formControlName="alive">
+                    </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <div class="p-inputgroup">
+                        <input type="text" pInputText placeholder="Reason" formControlName="reason">
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-nogutter justify-content-end">
+                <p-button [label]="!isEdit ? 'Next' : 'Save'" icon="pi pi-angle-right" [disabled]="false" iconPos="right" type="submit">
+                </p-button>
+            </div>
+        </form>
+    </p-card>
+</div>

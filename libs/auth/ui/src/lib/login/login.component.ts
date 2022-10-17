@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
   
   signIn() {
+    sessionStorage.setItem('token', 'token')
     this.router.navigateByUrl("dashboard")
     this.http.post(`${this.appConfig.baseUrl}login?email=${this.email}&password=${this.password}`,
       {
@@ -35,6 +36,7 @@ export class LoginComponent implements OnInit {
   }
 
   handleError(error: any) {
+
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
       // Get client-side error

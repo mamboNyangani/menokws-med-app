@@ -5,3 +5,4 @@ export * from './lib/models/contact-details';
 export * from './lib/models/guardian'
 export * from './lib/models/stastitics'
 export * from './lib/models/choices'
+export * from './lib/models/misc'
