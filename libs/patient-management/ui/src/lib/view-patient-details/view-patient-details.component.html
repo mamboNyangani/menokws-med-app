@@ -26,22 +26,22 @@
                     <menokws-next-of-kin-page [id]="id"></menokws-next-of-kin-page>
                 </ng-template>
             </p-tabPanel>
-            <p-tabPanel header="Statitics">
+            <p-tabPanel header="Statistics">
                 <ng-template pTemplate="content">
-                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
+                    <menokws-statistics-page [id]="id"></menokws-statistics-page>
                 </ng-template>
             </p-tabPanel>
             <p-tabPanel header="Choices">
+                <ng-template pTemplate="content">
+                    <menokws-patient-choices-page [id]="id"></menokws-patient-choices-page>
+                </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Misc">
                 <ng-template pTemplate="content">
                     <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
                 </ng-template>
             </p-tabPanel>
             <p-tabPanel header="Episodes">
-                <ng-template pTemplate="content">
-                    <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
-                </ng-template>
-            </p-tabPanel>
-            <p-tabPanel header="Misc">
                 <ng-template pTemplate="content">
                     <menokws-employment-details-page [id]="id"></menokws-employment-details-page>
                 </ng-template>

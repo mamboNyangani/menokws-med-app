@@ -20,7 +20,6 @@ export class PersonalDetailsPageComponent implements OnInit {
 
   getPatient(){
     this.service.getById(`patient`, this.id).subscribe(res => {
-      console.log(res)
       this.patient = res.patient
     })
   }

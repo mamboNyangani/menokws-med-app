@@ -2,49 +2,30 @@
     <p-card>
         <form [formGroup]="form" (submit)="nextPage()">
             <div class="grid p-fluid p-3">
-                <div class="col-12 md:col-4">
+                <div class="col-12 md:col-6">
                     <div class="p-inputgroup">
-                        <input type="text" placeholder="First Name" pInputText formControlName="name">
+                        <input type="text" placeholder="Allow Email" pInputText formControlName="allow_email">
                     </div>
                 </div>
-                <div class="col-12 md:col-4">
+                <div class="col-12 md:col-6">
                     <div class="p-inputgroup">
-                        <input type="text" pInputText placeholder="Middle name" formControlName ="middle_name">
-                    </div>
-                </div>
-                <div class="col-12 md:col-4">
-                    <div class="p-inputgroup">
-                        <input type="text" pInputText placeholder="Last Name" formControlName ="surname">
+                        <input type="text" pInputText placeholder="Allow SMS" formControlName="allow_sms">
                     </div>
                 </div>
             </div>
             <div class="grid p-fluid p-3">
-                <div class="col-12 md:col-4">
+                <div class="col-12 md:col-6">
                     <div class="p-inputgroup">
-                        <input type="text" placeholder="ID No" pInputText formControlName="id_number">
-                    </div>
-                </div>
-                <div class="col-12 md:col-4">
-                    <div class="p-inputgroup">
-                        <input type="text" pInputText placeholder="Date of Birth" formControlName ="date_of_birth">
-                    </div>
-                </div>
-                <div class="col-12 md:col-4">
-                    <div class="p-inputgroup">
-                        <input type="text" pInputText placeholder="Last Name" formControlName ="gender">
+                        <input type="text" placeholder="Leave message with" pInputText formControlName="leave_message_with">
                     </div>
                 </div>
             </div>
-            <div class="grid p-fluid p-3">
-                <div class="col-12 md:col-4">
-                    <div class="p-inputgroup">
-                        <input type="text" placeholder="Marital Status" pInputText formControlName="marital_status">
-                    </div>
-                </div>
+            <div class="grid grid-nogutter justify-content-end">
+                <button  *ngIf="!isEdit" pButton type="button" label="Skip" class="p-button-outlined mr-2" icon="pi pi-angle-left"
+                    (click)="skip()"></button>
+                <p-button [label]="!isEdit ? 'Next' : 'Save'" icon="pi pi-angle-right" [disabled]="false" iconPos="right" type="submit">
+                </p-button>
             </div>
-                <div class="grid grid-nogutter justify-content-end">
-                    <p-button label="Next" icon="pi pi-angle-right" [disabled]="false"  iconPos="right" type="submit"></p-button>
-                </div>
         </form>
     </p-card>
 </div>

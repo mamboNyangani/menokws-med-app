@@ -17,6 +17,8 @@ import { EmploymentDetailsPageComponent } from './pages/employment-details-page/
 import { PatientsPageComponent } from './patients-page/patients-page.component';
 import { ContactDetailsPageComponent } from './pages/contact-details-page/contact-details-page.component';
 import { NextOfKinPageComponent } from './pages/next-of-kin-page/next-of-kin-page.component';
+import { StatisticsPageComponent } from './pages/statistics-page/statistics-page.component';
+import { PatientChoicesPageComponent } from './pages/patient-choices-page/patient-choices-page.component';
 
 export const patientManagementUiRoutes: Route[] = [];
 
@@ -42,6 +44,8 @@ export const patientManagementUiRoutes: Route[] = [];
     EmploymentDetailsPageComponent,
     ContactDetailsPageComponent,
     NextOfKinPageComponent,
+    StatisticsPageComponent,
+    PatientChoicesPageComponent,
   ],
   providers: [DatePipe],
 })
