@@ -4,6 +4,7 @@ import { PrimeNGModule } from './prime-ng.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RequestInterceptor } from './services/interceptor';
+import { ErrorInterceptor } from './services/error-interceptor';
 
 
 
@@ -19,6 +20,7 @@ const MODULES = [
   imports: [...MODULES],
   exports: [...MODULES],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ]
 })
 export class UtilsCoreModule {}

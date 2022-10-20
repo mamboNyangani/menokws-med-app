@@ -11,8 +11,6 @@ import { RequestResult } from '../models/request-result';
 })
 
 export class RequestService<T> {
-  //BaseURL = 'https://621e2099849220b1fc90490b.mockapi.io/api/v1/';
-
   constructor(private http: HttpClient, @Inject(APP_CONFIG) private appConfig : any) {}
 
   httpOptions = {
@@ -25,13 +23,13 @@ export class RequestService<T> {
   get(url : string): Observable<T> {
     return this.http
       .get<T>(this.appConfig.baseUrl + url)
-      .pipe(retry(1), catchError(this.handleError));
+      .pipe(retry(1));
   }
 
   getById(url : string, id: any): Observable<T> {
     return this.http
       .get<T>(this.appConfig.baseUrl + url + '/'+id)
-      .pipe(retry(1), catchError(this.handleError));
+      .pipe(retry(1));
   }
 
   post(url : string, body: T): Observable<T> {
@@ -41,7 +39,7 @@ export class RequestService<T> {
         JSON.stringify(body),
         this.httpOptions
       )
-      .pipe(retry(1), catchError(this.handleError));
+      .pipe(retry(1));
   }
 
   update(url : string, id: any, body: T): Observable<T> {
@@ -51,28 +49,28 @@ export class RequestService<T> {
         JSON.stringify(body),
         this.httpOptions
       )
-      .pipe(retry(1), catchError(this.handleError));
+      .pipe(retry(1));
   }
 
   delete(url : string, id: any) {
     return this.http
       .delete<T>(this.appConfig.baseUrl + url + id, this.httpOptions)
-      .pipe(retry(1), catchError(this.handleError));
+      .pipe(retry(1));
   }
   
   // Error handling
-  handleError(error: any) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Get client-side error
-      errorMessage = error.error.message;
-    } else {
-      // Get server-side error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    window.alert(errorMessage);
-    return throwError(() => {
-      return errorMessage;
-    });
-  }
+  // handleError(error: any) {
+  //   let errorMessage = '';
+  //   if (error.error instanceof ErrorEvent) {
+  //     // Get client-side error
+  //     errorMessage = error.error.message;
+  //   } else {
+  //     // Get server-side error
+  //     errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+  //   }
+  //   window.alert(errorMessage);
+  //   return throwError(() => {
+  //     return errorMessage;
+  //   });
+  // }
 }
