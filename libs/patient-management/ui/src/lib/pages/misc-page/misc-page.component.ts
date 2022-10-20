@@ -19,7 +19,7 @@ export class MiscPageComponent implements OnInit {
   }
 
   getDetails(){
-    this.service.getById(`choice`, this.id).subscribe(res => {
+    this.service.getById(`choice/patient`, this.id).subscribe(res => {
       console.log(res)
       this.misc = res.g$guardian
     })

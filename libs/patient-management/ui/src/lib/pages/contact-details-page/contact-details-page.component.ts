@@ -19,7 +19,7 @@ export class ContactDetailsPageComponent implements OnInit {
   }
 
   getContactDetails(){
-    this.service.getById(`contact`, this.id).subscribe(res => {
+    this.service.getById(`contact/patient`, this.id).subscribe(res => {
       console.log(res)
       this.contactDetails = res.conta$contact
     })

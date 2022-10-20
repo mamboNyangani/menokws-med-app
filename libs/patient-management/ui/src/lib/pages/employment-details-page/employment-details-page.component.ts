@@ -12,6 +12,8 @@ import { EmploymentDetailsComponent } from '../../create/employment-details/empl
 export class EmploymentDetailsPageComponent implements OnInit {
   @Input() id : number | undefined
   employer! : Employer
+  hasData : boolean = false
+
   constructor(private service : RequestService<any>, private dialogService : DialogService) {}
 
   ngOnInit(): void {
@@ -19,9 +21,9 @@ export class EmploymentDetailsPageComponent implements OnInit {
   }
 
   getEmployer(){
-    this.service.getById(`employment`, this.id).subscribe(res => {
-      console.log(res)
-      this.employer = res.em$employment
+    this.service.getById(`employment/patient`, this.id).subscribe(res => {
+      this.hasData = res.$employment[0] ? true: false
+      this.employer = res.$employment[0] ? res.$employment[0] : {}
     })
   }
 
@@ -34,7 +36,8 @@ export class EmploymentDetailsPageComponent implements OnInit {
       maximizable: true,
       data :{
         isEdit : true,
-        employer : this.employer
+        employer : this.employer,
+        patientId : this.id
       }
     })
 }
