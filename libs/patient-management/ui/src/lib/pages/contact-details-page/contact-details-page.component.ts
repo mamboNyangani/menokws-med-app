@@ -12,6 +12,8 @@ import { ContactDetailsComponent } from '../../create/contact-details/contact-de
 export class ContactDetailsPageComponent implements OnInit {
   @Input() id : number | undefined
   contactDetails! : ContactDetails
+  hasData : boolean =false
+
   constructor(private service : RequestService<any>, private dialogService : DialogService) {}
 
   ngOnInit(): void {
@@ -20,8 +22,8 @@ export class ContactDetailsPageComponent implements OnInit {
 
   getContactDetails(){
     this.service.getById(`contact/patient`, this.id).subscribe(res => {
-      console.log(res)
-      this.contactDetails = res.conta$contact
+      this.hasData = res.$employment[0] ? true: false
+      this.contactDetails = res.$employment[0]
     })
   }
 
@@ -34,7 +36,8 @@ export class ContactDetailsPageComponent implements OnInit {
       maximizable: true,
       data :{
         isEdit : true,
-        contactDetails : this.contactDetails
+        contactDetails : this.contactDetails,
+        patientId : this.id
       }
     })
 }

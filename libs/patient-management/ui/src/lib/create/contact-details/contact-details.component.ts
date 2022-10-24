@@ -21,6 +21,10 @@ export class ContactDetailsComponent implements OnInit {
   ngOnInit(): void {
       this.contactDetails =  this.config.data ? this.config.data.contactDetails : new ContactDetails()
       this.isEdit = this.config.data ? this.config.data.isEdit : false
+      if(!this.patient){
+        this.patient = new Patient()
+        this.patient.id = this.config.data.patientId
+      }
     this.form = this.fb.group({
       emergency_contact: [this.contactDetails.emergency_contact, [Validators.required]],
       emergency_phone: [this.contactDetails.emergency_phone, [Validators.required]],

@@ -31,6 +31,7 @@ import {EditorModule} from 'primeng/editor';
 import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
 import {TimelineModule} from 'primeng/timeline';
+import {SkeletonModule} from 'primeng/skeleton';
 
 
 const MODULES: any[] = [
@@ -64,7 +65,8 @@ const MODULES: any[] = [
     FileUploadModule,
     StepsModule,
     TabViewModule,
-    TimelineModule
+    TimelineModule,
+    SkeletonModule
 ];
 
 @NgModule({
