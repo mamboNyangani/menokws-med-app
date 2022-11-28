@@ -19,7 +19,7 @@ export class StatisticsPageComponent implements OnInit {
   }
 
   getDetails(){
-    this.service.getById(`statistic`, this.id).subscribe(res => {
+    this.service.getById(`statistic/patient`, this.id).subscribe(res => {
       console.log(res)
       this.statistic = res.g$guardian
     })

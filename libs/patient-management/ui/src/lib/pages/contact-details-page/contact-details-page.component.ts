@@ -22,8 +22,8 @@ export class ContactDetailsPageComponent implements OnInit {
 
   getContactDetails(){
     this.service.getById(`contact/patient`, this.id).subscribe(res => {
-      this.hasData = res.$employment[0] ? true: false
-      this.contactDetails = res.$employment[0]
+      this.hasData = res.$contact[0] ? true: false
+      this.contactDetails = res.$contact[0]
     })
   }
 

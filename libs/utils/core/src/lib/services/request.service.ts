@@ -54,7 +54,7 @@ export class RequestService<T> {
 
   delete(url : string, id: any) {
     return this.http
-      .delete<T>(this.appConfig.baseUrl + url + id, this.httpOptions)
+      .delete<T>(this.appConfig.baseUrl + url + '/' + id, this.httpOptions)
       .pipe(retry(1));
   }
   
