@@ -1,0 +1,42 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/dashboards/src",
+  "prefix": "menokws",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/dashboards"],
+      "options": {
+        "project": "libs/dashboards/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/dashboards/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/dashboards/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/dashboards"],
+      "options": {
+        "jestConfig": "libs/dashboards/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/dashboards/**/*.ts",
+          "libs/dashboards/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

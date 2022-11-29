@@ -14,8 +14,8 @@ const routes: Route[] = [
         children:
             [
                 {
-                    path: 'dashboard',
-                    loadChildren: () => import('@menokws/patient-management').then(m => m.PatientManagementUiModule)
+                    path: '',
+                    loadChildren: () => import('@menokws/dashboards').then(m => m.DashboardsModule)
                 },
                 {
                     path : 'patient',

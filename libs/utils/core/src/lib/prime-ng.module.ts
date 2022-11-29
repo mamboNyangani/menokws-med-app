@@ -32,6 +32,8 @@ import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
 import {TimelineModule} from 'primeng/timeline';
 import {SkeletonModule} from 'primeng/skeleton';
+import {MenuModule} from 'primeng/menu';
+import {ChartModule} from 'primeng/chart';
 
 
 const MODULES: any[] = [
@@ -41,6 +43,7 @@ const MODULES: any[] = [
     MenubarModule,
     EditorModule,
     InputTextModule,
+    ChartModule,
     CalendarModule,
     CarouselModule,
     CheckboxModule,
@@ -50,6 +53,7 @@ const MODULES: any[] = [
     CardModule,
     DialogModule,
     DataViewModule,
+    MenuModule,
     TableModule,
     TabMenuModule,
     RatingModule,
