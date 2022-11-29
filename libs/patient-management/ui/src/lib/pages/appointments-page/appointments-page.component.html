@@ -1,1 +1,22 @@
-<h4>No Appointments</h4>
+<p-table [value]="appointments">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Patient Number</th>
+            <th>Provider Number</th>
+            <th>Room Number</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Duration(mins)</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.patient_id}}</td>
+            <td>{{product.provider_id}}</td>
+            <td>{{product.room_number}}</td>
+            <td>{{product.updated_at  | date}}</td>
+            <td>{{product.starting_time}}</td>
+            <td>{{product.duration_minutes}}</td>
+        </tr>
+    </ng-template>
+</p-table>

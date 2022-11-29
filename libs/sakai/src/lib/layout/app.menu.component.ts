@@ -24,7 +24,7 @@ export class AppMenuComponent implements OnInit {
                 label: 'Patient Management',
                 items: [
                     { label: 'Patients', icon: 'pi pi-fw pi-id-card', routerLink: ['patient'] },
-                    { label: 'Appointments', icon: 'pi pi-fw pi-check-square', routerLink: ['/patient'] },
+                    { label: 'Appointments', icon: 'pi pi-fw pi-check-square', routerLink: ['patient/all/appointments'] },
                 ]
             },
         ];

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestService } from '@menokws/core';
 
 @Component({
   selector: 'menokws-appointments-page',
@@ -6,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./appointments-page.component.scss'],
 })
 export class AppointmentsPageComponent implements OnInit {
-  constructor() {}
+  appointments: any;
+  constructor(private service : RequestService<any>) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAppointments()
+  }
+
+  getAppointments(){
+    this.service.get('appointment').subscribe((res : any) => {
+      this.appointments = res.app$appointments
+
+    })
+  }
 }
