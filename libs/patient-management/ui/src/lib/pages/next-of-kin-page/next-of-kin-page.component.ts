@@ -21,8 +21,7 @@ export class NextOfKinPageComponent implements OnInit {
 
   getDetails(){
     this.service.getById(`guardian/patient`, this.id).subscribe(res => {
-      console.log(res)
-      this.guardian = res.$guardian
+      this.guardian = res.$guardian[0]
     })
   }
 

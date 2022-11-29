@@ -35,7 +35,7 @@ export class EmploymentDetailsComponent implements OnInit {
 
   nextPage() {
     if(!this.form.valid) return
-    this.service.post(`add-employment?occupation=${this.form.value.occupation}&employer=${this.form.value.employer}&employer_address_1=${this.form.value.employer_address_1}&employer_address_2=${this.form.value.employer_address_2}&city=${this.form.value.employer_address_2}&country=${this.form.value.country}&postal_code=${this.form.value.postal_code}&patient_id=${this.config.data.patientId}`, {})
+    this.service.post(`add-employment?occupation=${this.form.value.occupation}&employer=${this.form.value.employer}&employer_address_1=${this.form.value.employer_address_1}&employer_address_2=${this.form.value.employer_address_2}&city=${this.form.value.employer_address_2}&country=${this.form.value.country}&postal_code=${this.form.value.postal_code}&patient_id=${this.patient.id}`, {})
     .subscribe(res => {
       this.save.emit(res)
     })

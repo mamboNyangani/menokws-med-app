@@ -22,8 +22,8 @@ export class EmploymentDetailsPageComponent implements OnInit {
 
   getEmployer(){
     this.service.getById(`employment/patient`, this.id).subscribe(res => {
-      this.hasData = res.$employment[0] ? true: false
-      this.employer = res.$employment[0] ? res.$employment[0] : {}
+      this.hasData = res.employment[0] ? true: false
+      this.employer = res.employment[0] ? res.employment[0] : {}
     })
   }
 

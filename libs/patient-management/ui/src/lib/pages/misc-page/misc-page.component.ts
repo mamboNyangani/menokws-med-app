@@ -12,6 +12,7 @@ import { MiscComponent } from '../../create/misc/misc.component';
 export class MiscPageComponent implements OnInit {
   @Input() id : number | undefined
   misc! : Misc
+  hasData: boolean = false;
   constructor(private service : RequestService<any>, private dialogService : DialogService) {}
 
   ngOnInit(): void {
@@ -19,9 +20,9 @@ export class MiscPageComponent implements OnInit {
   }
 
   getDetails(){
-    this.service.getById(`choice/patient`, this.id).subscribe(res => {
-      console.log(res)
-      this.misc = res.g$guardian
+    this.service.getById(`misc/patient`, this.id).subscribe(res => {
+      this.hasData = res.misc[0] ? true: false
+      this.misc = res.misc[0] ? res.misc[0] : {}
     })
   }
 

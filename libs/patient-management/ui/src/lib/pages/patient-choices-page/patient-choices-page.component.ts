@@ -11,6 +11,7 @@ import { DialogService } from 'primeng/dynamicdialog';
 export class PatientChoicesPageComponent implements OnInit {
   @Input() id : number | undefined
   choices! : Choices
+  hasData: boolean = false;
   constructor(private service : RequestService<any>, private dialogService : DialogService) {}
 
   ngOnInit(): void {
@@ -19,8 +20,8 @@ export class PatientChoicesPageComponent implements OnInit {
 
   getDetails(){
     this.service.getById(`choice/patient`, this.id).subscribe(res => {
-      console.log(res)
-      this.choices = res.g$guardian
+      this.hasData = res.choice[0] ? true: false
+      this.choices = res.choice[0] ? res.choice[0] : {}
     })
   }
 

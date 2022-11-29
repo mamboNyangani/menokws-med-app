@@ -12,6 +12,7 @@ import { PatientStastiticsComponent } from '../../create/patient-stastitics/pati
 export class StatisticsPageComponent implements OnInit {
   @Input() id : number | undefined
   statistic! : Stastitics
+  hasData: boolean = false;
   constructor(private service : RequestService<any>, private dialogService : DialogService) {}
 
   ngOnInit(): void {
@@ -20,8 +21,8 @@ export class StatisticsPageComponent implements OnInit {
 
   getDetails(){
     this.service.getById(`statistic/patient`, this.id).subscribe(res => {
-      console.log(res)
-      this.statistic = res.g$guardian
+      this.hasData = res.statistic[0] ? true: false
+      this.statistic = res.statistic[0] ? res.statistic[0] : {}
     })
   }
 

@@ -31,7 +31,6 @@ export class PatientsPageComponent implements OnInit {
   }
 
   deletePatient(patient: Patient) {
-    console.log(patient)
     this.service.delete('patient', patient.id).subscribe(res => {
       this.messageService.add({
         severity: 'success',
@@ -50,7 +49,8 @@ export class PatientsPageComponent implements OnInit {
       width: '70%',
       contentStyle: { "overflow": "auto" },
       baseZIndex: 10000,
-      maximizable: true
+      maximizable: true,
+  
     })
 
   }

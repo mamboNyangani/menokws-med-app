@@ -29,9 +29,7 @@ export class AddPatientComponent implements OnInit {
   }
 
   next(patient? : any) {
-    console.log(patient)
     if(patient) this.patient = patient
-    console.log(patient)
     this.index++
   }
 
