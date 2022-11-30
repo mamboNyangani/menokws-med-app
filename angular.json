@@ -3,7 +3,7 @@
   "version": 2,
   "projects": {
     "auth-ui": "libs/auth/ui",
-    "dashboards": "libs/dashboards",
+    "dashboards-ui": "libs/dashboards/ui",
     "med-records": "apps/med-records",
     "med-records-e2e": "apps/med-records-e2e",
     "overlay-emed-layout": "libs/overlay/emed-layout",

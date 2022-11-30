@@ -17,7 +17,7 @@
     "paths": {
       "@menokws/auth-ui": ["libs/auth/ui/src/index.ts"],
       "@menokws/core": ["libs/utils/core/src/index.ts"],
-      "@menokws/dashboards": ["libs/dashboards/src/index.ts"],
+      "@menokws/dashboards-ui": ["libs/dashboards/ui/src/index.ts"],
       "@menokws/emed-layout": ["libs/overlay/emed-layout/src/index.ts"],
       "@menokws/patient-management": [
         "libs/patient-management/ui/src/index.ts"

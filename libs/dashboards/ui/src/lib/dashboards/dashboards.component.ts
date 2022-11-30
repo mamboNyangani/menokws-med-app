@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LayoutService, ProductService } from '@menokws/sakai';
+import { LayoutService } from '@menokws/sakai';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -18,7 +18,7 @@ export class DashboardsComponent implements OnInit {
 
   subscription!: any;
 
-  constructor(private productService: ProductService, public layoutService: LayoutService) {
+  constructor(public layoutService: LayoutService) {
       this.subscription = this.layoutService.configUpdate$.subscribe(() => {
           this.initChart();
       });

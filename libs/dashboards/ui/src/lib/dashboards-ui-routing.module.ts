@@ -6,7 +6,7 @@ const routes : Routes = [
     {
         path : '',
         component : DashboardsComponent
-    }
+    },
 ]
 
 @NgModule({
@@ -16,4 +16,4 @@ const routes : Routes = [
     exports : [RouterModule]
 })
 
-export class DashboardsRoutingModule { }
+export class DashboardsUiRoutingModule { }
