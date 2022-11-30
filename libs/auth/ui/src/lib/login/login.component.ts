@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   
   signIn() {
     sessionStorage.setItem('token', 'token')
-    this.router.navigateByUrl("dashboard")
+    this.router.navigateByUrl("")
     this.http.post(`${this.appConfig.baseUrl}login?email=${this.email}&password=${this.password}`,
       {
         headers: new HttpHeaders({
