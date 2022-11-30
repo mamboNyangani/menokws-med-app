@@ -9,7 +9,6 @@ import { SakaiModule } from '@menokws/sakai';
 @NgModule({
   imports: [CommonModule,
     DashboardsUiRoutingModule, 
-    SakaiModule,
     UtilsCoreModule],
   declarations: [DashboardsComponent]
 })
